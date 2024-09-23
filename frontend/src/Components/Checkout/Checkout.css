@@ -1,0 +1,210 @@
+.checkout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.checkout h1 {
+  margin-bottom: 20px;
+}
+
+.checkout-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  gap: 20px; /* Khoảng cách giữa hai phần */
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-form-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.checkout-form-item label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.checkout-form-item input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.checkout-form-item .radio-group {
+  display: flex;
+  flex-direction: column; /* Hoặc row nếu bạn muốn các nút radio nằm ngang */
+  gap: 10px; /* Khoảng cách giữa các nút radio */
+}
+
+.checkout-form-item .radio-group div {
+  display: flex;
+  align-items: center; /* Căn giữa dấu radio và nhãn */
+}
+
+.checkout-form-item input[type="radio"] {
+  margin-right: 10px; /* Khoảng cách giữa dấu radio và nhãn */
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+.checkout-summary {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-summary h2 {
+  margin-bottom: 20px;
+}
+
+.checkout-summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.checkout-total {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Styles cho phần thông báo xác nhận đơn hàng */
+.order-confirmation-container {
+  position: fixed; /* Đảm bảo thông báo luôn hiển thị trên toàn màn hình */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5); /* Màu nền mờ để làm nổi bật thông báo */
+  z-index: 1000; /* Đảm bảo thông báo xuất hiện trên các phần tử khác */
+}
+
+.order-confirmation {
+  background-color: #d4edda;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center; /* Căn giữa nội dung trong thông báo */
+}
+
+.order-confirmation h2 {
+  color: #155724;
+  margin-bottom: 10px;
+}
+
+.order-confirmation p {
+  color: #155724;
+  font-size: 16px;
+}
+
+/* Styles cho modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal h2 {
+  margin-bottom: 20px;
+}
+
+.modal button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal button:first-child {
+  background-color: #28a745;
+  color: white;
+}
+
+.modal button:first-child:hover {
+  background-color: #218838;
+}
+
+.modal button:last-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+.modal button:last-child:hover {
+  background-color: #c82333;
+}
+
+/* Styles cho nút "Back to Cart" */
+.order-confirmation button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.order-confirmation button:hover {
+  background-color: #0056b3;
+}

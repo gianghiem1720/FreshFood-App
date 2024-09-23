@@ -1,0 +1,260 @@
+/* General Styles */
+.cartitems {
+  margin: 100px 170px;
+}
+
+.cartitems hr {
+  height: 3px;
+  background: #e2e2e2;
+  border: 0;
+}
+
+.cartitems-format-main {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 75px;
+  padding: 20px 0;
+  color: #454545;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cartitems-format {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.carticon-product-icon {
+  height: 62px;
+}
+
+.cartitems-remove-icon {
+  width: 15px;
+  margin: 0 40px;
+  cursor: pointer;
+}
+
+.cartitems-quantity-controls {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ebebeb;
+  border-radius: 5px;
+}
+
+.cartitems-quantity-controls button {
+  background: #f1f1f1;
+  border: none;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartitems-quantity-controls button:hover {
+  background: #ddd;
+}
+
+.cartitems-quantity-controls p {
+  width: 50px;
+  height: 32px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.cartitems-quantity-controls button:first-of-type {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.cartitems-quantity-controls button:last-of-type {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.cartitems-down {
+  display: flex;
+  margin: 100px 0;
+}
+
+.cartitems-total {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 200px;
+  gap: 40px;
+}
+
+.cartitems-total-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.cartitems-total button {
+  width: 262px;
+  height: 58px;
+  outline: none;
+  border: none;
+  background: #ff5a5a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cartitems-promocode {
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cartitems-promobox {
+  width: 100%;
+  max-width: 504px;
+  margin-top: 15px;
+  padding-left: 20px;
+  height: 58px;
+  background: #eaeaea;
+  display: flex;
+  align-items: center;
+}
+
+.cartitems-promobox input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  width: 330px;
+  height: 50px;
+  padding: 0;
+}
+
+.cartitems-promobox button {
+  width: 170px;
+  height: 58px;
+  font-size: 16px;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+.cartitems-promo-buttons-wrapper {
+  margin-top: 15px;
+}
+
+.cartitems-promo-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cartitems-promo-buttons button {
+  padding: 4px 8px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  height: 30px;
+}
+
+.cartitems-promo-buttons button:hover {
+  background-color: #0056b3;
+}
+
+.cartitems-promo-list {
+  margin-top: 20px;
+}
+
+.cartitems-promo-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cartitems-promo-list li {
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cartitems-promo-list p {
+  margin: 0;
+  text-align: center;
+  color: #333;
+}
+
+/* Media Queries */
+@media (max-width: 1280px) {
+  .cartitems {
+    margin: 60px 50px;
+  }
+
+  .cartitems-format-main {
+    grid-template-columns: 0.5fr 3fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    gap: 20px;
+    padding: 15px 0;
+    font-size: 15px;
+  }
+
+  .carticon-product-icon {
+    height: 50px;
+  }
+
+  .cartitems-remove-icon {
+    margin: auto;
+  }
+
+  .cartitems-quantity-controls {
+    width: 40px;
+    height: 30px;
+  }
+
+  .cartitems-down {
+    margin: 80px 0;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .cartitems-total {
+    margin: 0;
+  }
+
+  .cartitems-total button {
+    max-width: 200px;
+    height: 45px;
+    font-size: 13px;
+  }
+
+  .cartitems-promobox {
+    max-width: 500px;
+  }
+
+  .cartitems-promobox input {
+    width: 100%;
+  }
+
+  .cartitems-promobox button {
+    width: 120px;
+    margin-left: -125px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cartitems-format-main {
+    display: none;
+    grid-template-columns: 0.5fr 3fr 0.5fr;
+    gap: 10px;
+  }
+
+  .cartitems-format {
+    display: grid;
+  }
+}

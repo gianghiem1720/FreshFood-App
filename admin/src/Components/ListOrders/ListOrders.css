@@ -1,0 +1,60 @@
+.list-orders {
+  width: 100%;
+  max-width: 1200px; /* Thay đổi kích thước theo nhu cầu của bạn */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.listorders-format-main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.listorders-format {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.listorders-allorders {
+  max-height: 500px; /* Thay đổi kích thước theo nhu cầu của bạn */
+  overflow-y: auto;
+}
+
+.listorders-format button {
+  cursor: pointer;
+}
+
+.order-details {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px; /* Thay đổi kích thước tối đa của bảng chi tiết */
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.order-details-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.order-details-header h3 {
+  margin: 0;
+}
+
+.order-details-item p {
+  margin: 5px 0;
+}

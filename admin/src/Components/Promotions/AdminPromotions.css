@@ -1,0 +1,54 @@
+.admin-promotions {
+  padding: 20px;
+}
+
+.admin-promotions h1 {
+  margin-bottom: 20px;
+}
+
+.add-promo {
+  margin-bottom: 20px;
+}
+
+.add-promo input {
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.add-promo button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #5cb85c;
+  color: white;
+  cursor: pointer;
+}
+
+.add-promo button:hover {
+  background-color: #4cae4c;
+}
+
+.admin-promotions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-promotions ul li {
+  margin-bottom: 10px;
+}
+
+.admin-promotions ul li button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #d9534f;
+  color: white;
+  cursor: pointer;
+}
+
+.admin-promotions ul li button:hover {
+  background-color: #c9302c;
+}

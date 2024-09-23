@@ -1,0 +1,171 @@
+/* MyOrders.css */
+.my-orders-container {
+  padding: 20px;
+}
+
+.my-orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-to-profile-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-profile-button:hover {
+  background-color: #0056b3;
+}
+
+.my-orders-title {
+  margin: 0;
+}
+
+.my-orders-no-orders {
+  font-size: 18px;
+  color: #666;
+}
+
+.my-orders-list-container {
+  overflow-y: auto;
+  max-height: 400px; /* Điều chỉnh chiều cao theo nhu cầu */
+}
+
+.my-orders-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.my-orders-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-details {
+  flex: 1;
+}
+
+.my-orders-id {
+  font-size: 18px;
+  margin: 0 0 5px 0;
+}
+
+.my-orders-date,
+.my-orders-amount,
+.my-orders-status {
+  margin: 5px 0;
+}
+
+.view-details-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.view-details-button:hover {
+  background-color: #218838;
+}
+
+.order-details-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-details-modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+  max-height: 80%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  color: red;
+}
+
+.preview-export-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.view-preview-button {
+  background: #4CAF50;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.view-preview-button:hover {
+  background: #45a049;
+}
+
+.export-pdf-button {
+  background: #2196F3;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.export-pdf-button:hover {
+  background: #1976D2;
+}
+
+.cancel-preview-button {
+  background: #f44336;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cancel-preview-button:hover {
+  background: #e53935;
+}

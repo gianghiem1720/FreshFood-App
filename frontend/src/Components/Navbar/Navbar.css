@@ -1,0 +1,325 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Căn chỉnh logo, menu và các nút ở hai bên */
+  align-items: center;
+  padding: 16px;
+  box-shadow: 0 1px 3px -2px black;
+  position: relative;
+}
+
+/* Logo section */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo p {
+  color: #171717;
+  font-size: 38px;
+  font-weight: 600;
+}
+
+.nav-logo img {
+  width: 100px;
+}
+
+/* Navigation menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  color: #626262;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.nav-menu hr {
+  border: none;
+  width: 80%;
+  height: 3px;
+  border-radius: 10px;
+  background: #FF4141;
+}
+
+/* Search section */
+.nav-search-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-search-form {
+  display: flex;
+}
+
+.nav-search-input {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+}
+
+.nav-search-button {
+  padding: 8px 16px;
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-search-button:hover {
+  background-color: #0056b3;
+}
+
+/* Login, cart, and avatar section */
+.nav-login-cart {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Khoảng cách giữa các mục */
+  position: relative; /* Để định vị số lượng trong giỏ hàng */
+}
+
+.nav-login-cart button {
+  width: 157px;
+  height: 58px;
+  outline: none;
+  border: 1px solid #7a7a7a;
+  border-radius: 75px;
+  color: #515151;
+  font-size: 20px;
+  font-weight: 500;
+  background: white;
+  cursor: pointer;
+}
+
+.nav-login-cart button:active {
+  background: #f3f3f3;
+}
+
+/* Cart icon with count */
+.nav-cart-link {
+  position: relative; /* Để định vị số lượng trên giỏ hàng */
+}
+
+.nav-cart-count {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  border-radius: 50%;
+  font-size: 14px;
+  background: red;
+  color: white;
+}
+
+/* Avatar */
+.nav-avatar-link {
+  display: flex;
+  align-items: center;
+}
+
+.nav-avatar {
+  width: 40px; /* Kích thước của avatar */
+  border-radius: 50%; /* Để avatar có hình tròn */
+}
+
+/* Dropdown icon */
+.nav-dropdown {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: none;
+}
+
+.nav-dropdown.open {
+  transform: rotate(90deg);
+}
+
+.nav-menu-visible {
+  display: flex;
+}
+
+/* Responsive design */
+@media (max-width: 1280px) {
+  .navbar {
+    padding: 12px 50px;
+  }
+
+  .nav-logo img {
+    width: 40px;
+  }
+
+  .nav-logo p {
+    font-size: 25px;
+  }
+
+  .nav-menu {
+    gap: 30px;
+    font-size: 16px;
+  }
+
+  .nav-login-cart {
+    gap: 30px;
+  }
+
+  .nav-login-cart button {
+    width: 120px;
+    height: 45px;
+    font-size: 16px;
+  }
+
+  .nav-cart-count {
+    font-size: 12px;
+    top: -5px;
+    right: -5px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 12px 30px;
+  }
+
+  .nav-menu {
+    gap: 25px;
+    font-size: 14px;
+  }
+
+  .nav-login-cart button {
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .nav-login-cart img {
+    width: 30px;
+  }
+
+  .nav-cart-count {
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    top: -5px;
+    right: -5px;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 10px 0px;
+    position: relative;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    top: 50px;
+    left: 0;
+  }
+
+  .nav-menu-visible {
+    display: flex;
+  }
+
+  .nav-dropdown {
+    display: block;
+    margin-left: 10px;
+    width: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    padding: 8px 0px;
+  }
+
+  .nav-logo {
+    transform: scale(0.8);
+  }
+
+  .nav-menu {
+    height: 70px;
+    top: 50px;
+  }
+
+  .nav-login-cart {
+    transform: scale(0.8);
+  }
+}
+/* Search section */
+.nav-search-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-search-input {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+}
+
+.search-results {
+  position: absolute;
+  top: 100%; /* Position below the search input */
+  left: 0;
+  width: 100%;
+  max-height: 300px; /* Limit the height */
+  overflow-y: auto; /* Add scroll if necessary */
+  background-color: #fff; /* Ensure background is white */
+  border: 1px solid #ddd; /* Add border for better visibility */
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow for better visibility */
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-result-item:hover {
+  background-color: #f1f1f1; /* Highlight on hover */
+}
+
+.search-result-image {
+  width: 50px; /* Adjust the size of the image */
+  height: 50px;
+  object-fit: cover; /* Ensure the image covers the area */
+  margin-right: 10px; /* Space between image and text */
+}
+
+.search-result-name {
+  font-size: 14px; /* Adjust the size of the text */
+  margin: 0;
+}
+

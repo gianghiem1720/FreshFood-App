@@ -1,0 +1,89 @@
+.popular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: auto; /* Thay đổi từ 90vh sang auto để không làm giãn cách quá mức */
+}
+
+.popular h1 {
+  color: #171717;
+  font-size: 40px; /* Giảm kích thước font */
+  font-weight: 600;
+}
+
+.popular hr {
+  width: 150px; /* Giảm chiều rộng */
+  height: 4px;
+  border-radius: 10px;
+  background: #252525;
+}
+
+.popular-item {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap; /* Cho phép hiển thị nhiều hàng */
+  gap: 15px; /* Giảm khoảng cách giữa các sản phẩm */
+  justify-content: center; /* Căn giữa các sản phẩm */
+}
+
+.popular-item > * {
+  flex: 1 1 calc(25% - 15px); /* Hiển thị 4 sản phẩm trên một hàng với khoảng cách giữa các sản phẩm */
+}
+
+@media(max-width:1280px) {
+  .popular {
+    height: auto; /* Thay đổi từ 70vh sang auto */
+  }
+  .popular h1 {
+    font-size: 35px;
+  }
+  .popular hr {
+    width: 140px;
+  }
+  .popular-item {
+    gap: 10px;
+  }
+}
+
+@media(max-width:1024px) {
+  .popular {
+    height: auto; /* Thay đổi từ 60vh sang auto */
+  }
+  .popular h1 {
+    font-size: 30px;
+  }
+  .popular hr {
+    width: 120px;
+  }
+  .popular-item {
+    gap: 10px;
+  }
+}
+
+@media(max-width:800px) {
+  .popular {
+    height: auto; /* Thay đổi từ 50vh sang auto */
+    gap: 6px;
+  }
+  .popular h1 {
+    font-size: 25px;
+  }
+  .popular hr {
+    width: 100px;
+  }
+  .popular-item {
+    grid-template-columns: repeat(2, 1fr); /* Hiển thị 2 sản phẩm trên một hàng */
+    gap: 15px;
+  }
+}
+
+@media(max-width:500px) {
+  .popular {
+    height: auto; /* Thay đổi từ 90vh sang auto */
+  }
+  .popular-item {
+    grid-template-columns: 1fr; /* Hiển thị 1 sản phẩm trên một hàng */
+    gap: 20px;
+  }
+}
